@@ -5,6 +5,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const config = ({
   testDir: './tests',
+
   timeout: 30 * 1000,
  expect: {
   timeout: 5000,
@@ -13,7 +14,9 @@ const config = ({
   use: {
     
 browserName: 'chromium',
-headless: false 
+headless: false,
+actionTimeout: 10 * 1000,
+      navigationTimeout: 30 * 1000,
 
   },
   
